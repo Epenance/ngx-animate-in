@@ -6,7 +6,7 @@
     "email": "info@dosh.dk",
     "url": "mereommig.dk"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
@@ -19,25 +19,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zurfyx/angular-library-starter-kit.git"
+    "url": "git+https://github.com/Epenance/ngx-animate-in.git"
   },
   "bugs": {
-    "url": "https://github.com/zurfyx/angular-library-starter-kit/issues"
+    "url": "https://github.com/Epenance/ngx-animate-in/issues"
   },
-  "homepage": "https://github.com/zurfyx/angular-library-starter-kit#readme",
+  "homepage": "https://github.com/Epenance/ngx-animate-in#readme",
   "keywords": [
     "angular",
-    "library",
-    "starter",
-    "typescript",
-    "angular-cli",
-    "ng-packagr"
+    "animate"
   ],
   "private": false,
   "dependencies": {
     "@angular/core": "^4.2.4",
     "@angular/common": "^4.2.4",
-    "@angular/platform-browser/animations": "^4.2.4"
+    "@angular/platform-browser": "^4.2.4"
   },
   "devDependencies": {
     "@angular/animations": "^4.2.4",
