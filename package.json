@@ -6,7 +6,7 @@
     "email": "info@dosh.dk",
     "url": "mereommig.dk"
   },
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
@@ -31,9 +31,9 @@
   ],
   "private": false,
   "dependencies": {
-    "@angular/core": "^4.2.4",
-    "@angular/common": "^4.2.4",
-    "@angular/platform-browser": "^4.2.4"
+    "@angular/core": "^5.0.1",
+    "@angular/common": "^5.0.1",
+    "@angular/platform-browser": "^5.0.1"
   },
   "devDependencies": {
     "@angular/animations": "^4.2.4",

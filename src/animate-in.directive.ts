@@ -3,7 +3,7 @@ import { animate, AnimationBuilder, style } from '@angular/animations';
 import { ObserverService } from './observer.service';
 
 @Directive({
-  selector: '[appAnimateIn]'
+  selector: '[animateIn]'
 })
 export class AnimateInDirective {
   @Input() animateInAnimation: any;

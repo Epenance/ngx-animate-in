@@ -17,8 +17,9 @@ Your module should now be up and ready!
 
 ## Usage
 
-TBA
+Add the "animateIn" attribute to any given element to animate it in once it enters the viewport.
 
+You can also specify your own animation by passing in an animation array in the "animateInAnimation" attribute on your elements.
 
 ## License
 
