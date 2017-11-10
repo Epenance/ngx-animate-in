@@ -18,6 +18,11 @@ export class AnimateInDirective {
     this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
   }
 
+  /**
+   * Builds and triggers the animation
+   * when it enters the viewport
+   * @param {boolean} inViewport
+   */
   startAnimating(inViewport: boolean) {
     if (inViewport) {
 
