@@ -6,7 +6,7 @@
     "email": "info@dosh.dk",
     "url": "mereommig.dk"
   },
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
@@ -26,7 +26,13 @@
   },
   "homepage": "https://github.com/Epenance/ngx-animate-in#readme",
   "keywords": [
+    "ng",
     "angular",
+    "angular2",
+    "angular4",
+    "angular5",
+    "viewport",
+    "animation",
     "animate"
   ],
   "private": false,
