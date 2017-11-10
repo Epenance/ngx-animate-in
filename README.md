@@ -1,6 +1,8 @@
 # ngx-animate-in
 A small directive to help you animate components in as they enter the viewport.
 
+[Example](https://ngx-animate-in-example.stackblitz.io/) ([src](https://stackblitz.com/edit/ngx-animate-in-example?file=app%2Fproduct-list%2Fproduct-list.component.html))
+
 #### Browser support
 The directive uses the experimental Intersection Observer API. Because of this its only supported in evergreen browsers, meaning anything but IE pretty much. 
 
