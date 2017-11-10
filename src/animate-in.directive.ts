@@ -1,5 +1,8 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import { animate, AnimationBuilder, AnimationMetadata, style } from '@angular/animations';
+import {
+  animate, AnimationBuilder, AnimationFactory, AnimationMetadata, AnimationPlayer,
+  style
+} from '@angular/animations';
 import { ObserverService } from './observer.service';
 
 @Directive({
@@ -18,7 +21,7 @@ export class AnimateInDirective {
   startAnimating(inViewport: boolean) {
     if (inViewport) {
 
-      let animation;
+      let animation: AnimationFactory;
 
       if ( this.animateInAnimation !== null && this.animateInAnimation !== undefined) {
         animation = this.animationBuilder.build(this.animateInAnimation);
@@ -29,7 +32,7 @@ export class AnimateInDirective {
         ]);
       }
 
-      const player = animation.create(this.el.nativeElement);
+      const player: AnimationPlayer = animation.create(this.el.nativeElement);
 
       player.play();
     }

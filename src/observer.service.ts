@@ -6,6 +6,13 @@ export class ObserverServiceConfig {
   threshold?: number | number[];
 }
 
+export type CallbackType = (inViewport: boolean) => void;
+
+export interface WatchedItem {
+  element: Element;
+  callback: CallbackType;
+}
+
 @Injectable()
 export class ObserverService {
   options: ObserverServiceConfig = {
@@ -13,20 +20,27 @@ export class ObserverService {
     threshold: 0.1
   };
 
-  watching: Array<any> = [];
+  watching: Array<WatchedItem> = [];
 
   observer: IntersectionObserver = new IntersectionObserver(this.handleEvent.bind(this), this.options);
 
+  /**
+   * Assigns the user config if they wish to
+   * override the defaults by using forRoot
+   * @param {ObserverServiceConfig} config
+   */
   constructor(@Optional() config: ObserverServiceConfig) {
     if (config) {
       this.options = Object.assign({}, this.options, config);
     }
-
-    console.log(this.options);
   }
 
-  handleEvent(entries) {
-    entries.forEach((entry) => {
+  /**
+   * Handles events made by the observer
+   * @param {IntersectionObserverEntry[]} entries
+   */
+  handleEvent(entries: IntersectionObserverEntry[]): void {
+    entries.forEach((entry: IntersectionObserverEntry) => {
       const target = this.watching.find((element) => {
         return element.element === entry.target;
       });
@@ -39,7 +53,13 @@ export class ObserverService {
     });
   }
 
-  addTarget(el, callback) {
+  /**
+   * Adds the target to our array so we can call its
+   * call back when it enters the viewport
+   * @param {Element} el
+   * @param {CallbackType} callback
+   */
+  addTarget(el: Element, callback: CallbackType): void {
     this.observer.observe(el);
 
     this.watching.push({
