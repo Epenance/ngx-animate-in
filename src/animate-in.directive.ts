@@ -27,11 +27,11 @@ export class AnimateInDirective {
       ]);
     }
 
-    this.player = animation.create(this.el.nativeElement);
-
-    this.player.init();
-
-    this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
+    if (this._observer.isSupported()) {
+      this.player = animation.create(this.el.nativeElement);
+      this.player.init();
+      this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
+    }
   }
 
   /**

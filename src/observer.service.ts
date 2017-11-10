@@ -20,9 +20,11 @@ export class ObserverService {
     threshold: 0.1
   };
 
+  supported = false;
+
   watching: Array<WatchedItem> = [];
 
-  observer: IntersectionObserver = new IntersectionObserver(this.handleEvent.bind(this), this.options);
+  observer: IntersectionObserver | null;
 
   /**
    * Assigns the user config if they wish to
@@ -30,6 +32,12 @@ export class ObserverService {
    * @param {ObserverServiceConfig} config
    */
   constructor(@Optional() config: ObserverServiceConfig) {
+    this.supported = 'IntersectionObserver' in window &&
+      'IntersectionObserverEntry' in window &&
+      'intersectionRatio' in (<any>window).IntersectionObserverEntry.prototype;
+
+    this.observer = this.supported ? new IntersectionObserver(this.handleEvent.bind(this), this.options) : null;
+
     if (config) {
       this.options = Object.assign({}, this.options, config);
     }
@@ -66,6 +74,10 @@ export class ObserverService {
       element: el,
       callback: callback
     });
+  }
+
+  isSupported() {
+    return this.supported;
   }
 
 }
