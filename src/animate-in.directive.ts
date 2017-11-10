@@ -1,12 +1,12 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import { animate, AnimationBuilder, style } from '@angular/animations';
+import { animate, AnimationBuilder, AnimationMetadata, style } from '@angular/animations';
 import { ObserverService } from './observer.service';
 
 @Directive({
   selector: '[animateIn]'
 })
 export class AnimateInDirective {
-  @Input() animateInAnimation: any;
+  @Input() animateInAnimation: AnimationMetadata|AnimationMetadata[];
 
   constructor(private _observer: ObserverService,
               private el: ElementRef,
