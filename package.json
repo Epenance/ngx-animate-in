@@ -31,10 +31,15 @@
   ],
   "private": false,
   "dependencies": {},
+  "peerDependencies": {
+    "@angular/animations": "^4.0.0 || ^5.0.0",
+    "@angular/common": "^4.0.0 || ^5.0.0",
+    "@angular/core": "^4.0.0 || ^5.0.0",
+    "@angular/platform": "^4.0.0 || ^5.0.0"
+  },
   "devDependencies": {
     "@angular/animations": "^5.0.1",
     "@angular/cli": "1.4.9",
-    "@angular/common": "^5.0.1",
     "@angular/compiler": "^5.0.1",
     "@angular/compiler-cli": "^5.0.1",
     "@angular/core": "^5.0.1",
