@@ -12,14 +12,6 @@ Check the [Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/A
 npm install --save ngx-animate-in
 ```
 
-Add the browser BrowserAnimationsModule and AnimateInModule to your app root module
-
-```
-BrowserAnimationsModule,
-AnimateInModule
-```
-Your module should now be up and ready to be used!
-
 ## Usage
 First, import the AnimateInModule in your app module:
 
