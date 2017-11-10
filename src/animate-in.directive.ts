@@ -15,7 +15,7 @@ export class AnimateInDirective {
     this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
   }
 
-  startAnimating(inViewport) {
+  startAnimating(inViewport: boolean) {
     if (inViewport) {
 
       let animation;

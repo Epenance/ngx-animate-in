@@ -1,15 +1,29 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
+
+export class ObserverServiceConfig {
+  root?: Element | null;
+  rootMargin?: string;
+  threshold?: number | number[];
+}
 
 @Injectable()
 export class ObserverService {
-  options = {
+  options: ObserverServiceConfig = {
     rootMargin: '0px',
     threshold: 0.1
   };
 
   watching: Array<any> = [];
 
-  observer = new IntersectionObserver(this.handleEvent.bind(this), this.options);
+  observer: IntersectionObserver = new IntersectionObserver(this.handleEvent.bind(this), this.options);
+
+  constructor(@Optional() config: ObserverServiceConfig) {
+    if (config) {
+      this.options = Object.assign({}, this.options, config);
+    }
+
+    console.log(this.options);
+  }
 
   handleEvent(entries) {
     entries.forEach((entry) => {
