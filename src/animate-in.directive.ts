@@ -16,8 +16,6 @@ export class AnimateInDirective {
               private el: ElementRef,
               private animationBuilder: AnimationBuilder
   ) {
-    this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
-
     let animation: AnimationFactory;
 
     if ( this.animateInAnimation !== null && this.animateInAnimation !== undefined) {
@@ -30,6 +28,10 @@ export class AnimateInDirective {
     }
 
     this.player = animation.create(this.el.nativeElement);
+
+    this.player.init();
+
+    this._observer.addTarget(this.el.nativeElement, this.startAnimating.bind(this));
   }
 
   /**

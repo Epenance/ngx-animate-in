@@ -9,6 +9,7 @@ import { animate, style } from '@angular/animations';
       <h2 animateIn [animateInAnimation]="customAnimation">Custom animation!</h2>
     </div>
   </div>
+  <app-product-list></app-product-list>
   `,
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,

@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+
+.add-more {
+  display: inline-block;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 5;
+  padding: 10px 15px;
+  border: none;
+  background: hsl(141, 71%, 48%);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}

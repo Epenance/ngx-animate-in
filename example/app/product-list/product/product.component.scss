@@ -1,0 +1,50 @@
+:host {
+  flex-basis: 33%;
+  display: block;
+  flex-grow: 1;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  min-width: 280px;
+}
+
+.image {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+.card-image {
+  display: block;
+  position: relative;
+}
+
+.image.is-4by3 {
+  padding-top: 75%;
+}
+
+.is-4by3 img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card {
+  height: 100%;
+  padding-top: .5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
