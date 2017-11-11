@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import {
   animate, AnimationBuilder, AnimationFactory, AnimationMetadata, AnimationPlayer,
   style
@@ -8,14 +8,16 @@ import { ObserverService } from './observer.service';
 @Directive({
   selector: '[animateIn]'
 })
-export class AnimateInDirective {
-  @Input() animateInAnimation: AnimationMetadata|AnimationMetadata[];
+export class AnimateInDirective implements OnInit{
+  @Input() animateInAnimation;
   player: AnimationPlayer;
 
   constructor(private _observer: ObserverService,
               private el: ElementRef,
               private animationBuilder: AnimationBuilder
-  ) {
+  ) {}
+
+  ngOnInit() {
     let animation: AnimationFactory;
 
     if ( this.animateInAnimation !== null && this.animateInAnimation !== undefined) {
