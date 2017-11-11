@@ -36,11 +36,11 @@ export class ObserverService {
       'IntersectionObserverEntry' in window &&
       'intersectionRatio' in (<any>window).IntersectionObserverEntry.prototype;
 
-    this.observer = this.supported ? new IntersectionObserver(this.handleEvent.bind(this), this.options) : null;
-
     if (config) {
       this.options = Object.assign({}, this.options, config);
     }
+
+    this.observer = this.supported ? new IntersectionObserver(this.handleEvent.bind(this), this.options) : null;
   }
 
   /**

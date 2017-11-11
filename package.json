@@ -6,7 +6,7 @@
     "email": "info@dosh.dk",
     "url": "mereommig.dk"
   },
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
