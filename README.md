@@ -8,6 +8,23 @@ The directive uses the experimental Intersection Observer API. Because of this i
 
 Check the [Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Browser_compatibility) table carefully before using this in production.
 
+#### Polyfill
+It is possible to polyfill the Intersection Observer in older browsers.
+
+There is several solutions I do however suggest you use [this](https://github.com/w3c/IntersectionObserver/tree/master/polyfill), made by google.
+
+Installing the polyfill:
+
+```
+npm install intersection-observer
+```
+
+Then import it in your polyfills.ts if you're using Angular CLI, if you aren't simply add it to one of your top level ts files such as main.ts like this:
+
+```typescript
+import 'intersection-observer'
+```
+
 ## Installation
 
 ```

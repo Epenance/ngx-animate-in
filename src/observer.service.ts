@@ -33,9 +33,7 @@ export class ObserverService {
    */
   constructor(@Optional() config: ObserverServiceConfig) {
     this.supported = 'IntersectionObserver' in window &&
-      'IntersectionObserverEntry' in window &&
-      'intersectionRatio' in (<any>window).IntersectionObserverEntry.prototype;
-
+      'IntersectionObserverEntry' in window;
     if (config) {
       this.options = Object.assign({}, this.options, config);
     }

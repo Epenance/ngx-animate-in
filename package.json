@@ -6,7 +6,7 @@
     "email": "info@dosh.dk",
     "url": "mereommig.dk"
   },
-  "version": "0.0.14",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
@@ -76,7 +76,8 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "^2.6.1",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "intersection-observer": "^0.4.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
