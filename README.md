@@ -4,14 +4,14 @@ A small directive to help you animate components in as they enter the viewport.
 [Example](https://ngx-animate-in-example.stackblitz.io/) ([src](https://stackblitz.com/edit/ngx-animate-in-example?file=app%2Fproduct-list%2Fproduct-list.component.html))
 
 #### Browser support
-The directive uses the experimental Intersection Observer API. Because of this its only supported in evergreen browsers, meaning anything but IE pretty much. 
+The directive uses the experimental Intersection Observer API. Because of this, it's only supported in evergreen browsers, meaning anything but IE pretty much. 
 
 Check the [Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Browser_compatibility) table carefully before using this in production.
 
 #### Polyfill
 It is possible to polyfill the Intersection Observer in older browsers.
 
-There is several solutions I do however suggest you use [this](https://github.com/w3c/IntersectionObserver/tree/master/polyfill), made by google.
+There are several solutions I do however suggest you use [this](https://github.com/w3c/IntersectionObserver/tree/master/polyfill), made by google.
 
 Installing the polyfill:
 
@@ -19,7 +19,7 @@ Installing the polyfill:
 npm install intersection-observer
 ```
 
-Then import it in your polyfills.ts if you're using Angular CLI, if you aren't simply add it to one of your top level ts files such as main.ts like this:
+Then import it in your polyfills.ts if you're using Angular CLI. If you aren't simply add it to one of your top level ts files such as main.ts like this:
 
 ```typescript
 import 'intersection-observer'
@@ -106,7 +106,7 @@ export class AppComponent {
 ```
 
 ## Changing the default config
-By default the root element of which we detect the intersection is the viewport. We also have a threshold of 10% meaning that the animation will not trigger until the element has 10% of its body within the viewport. Its also possible to define a offset of when it should start if you want it to trigger when its 100px before the viewport as an example. By default this is 0px.
+By default the root element of which we detect the intersection is the viewport. We also have a threshold of 10% meaning that the animation will not trigger until the element has 10% of its body within the viewport. It's also possible to define an offset of when it should start if you want it to trigger when it's at 100px before the viewport as an example. By default this is 0px.
 
 The option type looks like this:
 ```typescript
