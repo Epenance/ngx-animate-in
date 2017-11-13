@@ -19,7 +19,7 @@ Installing the polyfill:
 npm install intersection-observer
 ```
 
-Then import it in your polyfills.ts if you're using Angular CLI. If you aren't simply add it to one of your top level ts files such as main.ts like this:
+Then import it in your polyfills.ts if you're using Angular CLI. If you aren't, simply add it to one of your top level ts files such as main.ts like this:
 
 ```typescript
 import 'intersection-observer'
