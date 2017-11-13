@@ -106,7 +106,7 @@ export class AppComponent {
 ```
 
 ## Changing the default config
-By default the root element of which we detect the intersection is the viewport. We also have a threshold of 10% meaning that the animation will not trigger until the element has 10% of its body within the viewport. It's also possible to define an offset of when it should start if you want it to trigger when it's at 100px before the viewport as an example. By default this is 0px.
+By default the root element of which we detect the intersection is the viewport. We also have a threshold of 10% meaning that the animation will not trigger until the element has 10% of its body within the viewport. It's also possible to define an offset of when the animation should start. For example, if you want it to trigger when it's 100px before the viewport. By default this is 0px.
 
 The option type looks like this:
 ```typescript
@@ -117,7 +117,7 @@ interface ObserverServiceConfig {
 }
 ```
 
-To override the defaults simple pass a new config object into the forRoot function on the module like this:
+To override the defaults, simply pass a new config object into the forRoot function on the module like this:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
